@@ -20,3 +20,16 @@ console.log(sendMessage("привітики!", printMessage));
 let numToSquare = (num) => {return num * num};
 
 console.log(numToSquare(5));
+
+
+let isNumber  = (number) =>  { 
+if (!isNaN(number) && typeof number === "number") { 
+return "Аргумент є числом";
+}
+return "Аргумент не є числом";
+}
+
+console.log(isNumber(66));
+console.log(isNumber(null));
+console.log(isNumber(undefined));
+console.log(isNumber("55"));
