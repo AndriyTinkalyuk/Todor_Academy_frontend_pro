@@ -30,7 +30,7 @@ let text = 'Корови класно літають. Корови класні�
 let numbers = [4,5,6,7,8,932,42,21,454,6,57];
 
 let pairNumbers = (arr) => { 
- return arr.filter(num => num % 2 === 0)
+ return arr.filter(num => num % 2 === 0);
 }
 
 let sumNumbers = (arr) => { 
@@ -50,3 +50,36 @@ console.log(
     Maybe.of(text)
     .chain(value => replaceWords(value, "корови", "пташки"))
 );
+
+
+function curry(f) { 
+    return function(a) {
+      return function(b) {
+        return f(a, b);
+      };
+    };
+  }
+  
+
+  function sum(a, b) {
+    return a + b;
+  }
+  
+  let curriedSum = curry(sum);
+  
+  console.log(curriedSum(1)(2)); 
+ 
+
+
+  let accumulator = (accumulator) => { 
+    return (num) => { 
+        accumulator += num;
+        return accumulator;
+    }
+  }
+
+  let Myaccumumlator = accumulator(0);
+
+  console.log(Myaccumumlator(2));
+  console.log(Myaccumumlator(25));
+  console.log(Myaccumumlator(25));
