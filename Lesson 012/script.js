@@ -19,7 +19,8 @@ console.log('==================');
 
 let createCounter = (counter) => { 
   function counterPlus() { 
-    return counter++;
+    counter++;
+    return counter;
   }
 
   function getCounter() { 
@@ -34,10 +35,10 @@ let createCounter = (counter) => {
 
 let counter = createCounter(0);
 
-  counter.counterPlus();
 
-  console.log(counter.getCounter());
+  console.log( counter.counterPlus());
   
+  console.log('==================');
 
   counter.counterPlus();
   counter.counterPlus();
@@ -118,7 +119,7 @@ result = 0;
 
  let multiply = (secondNumber) => { 
   if(!isNaN(mainNumber) && !isNaN(secondNumber) && mainNumber !== null && secondNumber !== null) {
-   return  result = mainNumber + secondNumber;
+   return  result = mainNumber * secondNumber;
   }
   return result = 'обидва значення повинні бути числами!'
   }
