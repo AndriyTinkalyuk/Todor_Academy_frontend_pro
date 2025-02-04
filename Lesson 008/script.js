@@ -13,6 +13,12 @@ let person = {
         console.log(`Привіт, я ${person.name}.`);
     }
 }
+console.group("Person Information");
+console.log(person.name);
+console.log(person.universe);
+console.log(person.occupation);
+console.log(person.powers);
+console.groupEnd();
 
 
 person.introduce();
