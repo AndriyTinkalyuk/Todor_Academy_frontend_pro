@@ -68,25 +68,25 @@ let users = [];
 function createAccount(email, password) { 
 
     let person = { 
-        "_email": email,
-        "_password": password,
+        _email: email,
+        _password: password,
 
 
 
-        getEmail() { 
+        get email() { 
             return this._email;
         },
 
-        getPassword(){
+        get password(){
             return this._password;
         },
 
-        setEmail(newEmail) {
+        set email(newEmail) {
             this._email = newEmail;
             return 'Ел. пошту успішно змінено.'
         },
 
-        setPassword(newPassword) { 
+        set password(newPassword) { 
            if (this._password === newPassword) { return 'Новий пароль не може бути індентичним наявному'}
             this._password = newPassword;
             return 'Пароль успішно змінено.';
@@ -95,8 +95,8 @@ function createAccount(email, password) {
         details() {
             return `
     Дані облікового запису:
-    email:${this.getEmail()}
-    password: ${this.getPassword()}
+    email:${this.email}
+    password: ${this.password}
          `
         },
 
@@ -110,12 +110,12 @@ function createAccount(email, password) {
 
 
 function checkEmail(email) { 
-    return users.some(user => user.getEmail() === email);
+    return users.some(user => user.email === email);
 }
 
 function findUser(email) {
     if (checkEmail(email)) { 
-        return users.find(user => user.getEmail() === email);
+        return users.find(user => user.email === email);
     }
       return 'Даного користувача не існує.'
 }
@@ -126,7 +126,7 @@ function changeEmail(email, password, newEmail) {
         return currentUser;
     }
 
-    return currentUser.getPassword() === password ? currentUser.setEmail(newEmail) : 'Ел. пошта та пароль не збігаються.';  
+    return currentUser.password === password ? currentUser.email = newEmail : 'Ел. пошта та пароль не збігаються.';  
 }
 
 function changePassword(email, password, newPassword) {
@@ -135,7 +135,7 @@ function changePassword(email, password, newPassword) {
         return currentUser;
     }
 
-    return currentUser.getPassword() === password ? currentUser.setPassword(newPassword) : 'Ел. пошта та пароль не збігаються.'; 
+    return currentUser.password === password ? currentUser.password = newPassword : 'Ел. пошта та пароль не збігаються.'; 
 
 }
 
