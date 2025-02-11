@@ -32,6 +32,7 @@ const TaskList =  function(id, title, description) {
     this.removeTask = (id) => {
        let currentTask = this.list.findIndex(task => task.id === id);
        if(currentTask !== -1) {  // findIndex може повернути -1, якщо не знайде елемент (ну не може, а точно поверне, якщо не знайде елемент).
+       //  можна б було винести в віддільну функцію, щоб перевикористати нижче
         this.list.splice(currentTask, 1);
         console.log(`task with index ${id} deleted.`);
     } else { 
@@ -42,7 +43,7 @@ const TaskList =  function(id, title, description) {
     this.showOverdueTasks = () => { 
     let overdueTasks = this.list.filter(task => task.deadline < new Date());
     console.log(`Overdue tasks:`)
-    if (overdueTasks > 0) { 
+    if (overdueTasks.length > 0) { 
         renderTasks(overdueTasks);
     } else { 
         console.log(`none`)
@@ -59,7 +60,7 @@ const TaskList =  function(id, title, description) {
         }
     }
 
-    renderTasks = (array) => { 
+    this.renderTasks = (array) => { 
         array.forEach((task) => {
             console.group(task.title)
             for(let key in task) { 
@@ -76,7 +77,7 @@ const TaskList =  function(id, title, description) {
     }
 
 
-    calcDeadline = (task, key) => { 
+    this.calcDeadline = (task, key) => { 
             let remainder = Math.ceil((task[key] - new Date()) / (1000 * 60 * 60 * 24));
             if(remainder < 0) { 
             console.log(`Overdue ${-remainder} days`) 
@@ -110,7 +111,11 @@ class Planner {
 
     removeTaskList(id) { 
         let currentTask = this.list.findIndex(task => task.id === id);
-        this.list.splice(currentTask, 1);
+        if(currentTask !== -1) { 
+        this.list.splice(currentTask, 1);}
+        else { 
+            console.log(`taskList with index ${id} don't exists.`);
+        }
     }
 
     showTaskLists() {
@@ -119,10 +124,19 @@ class Planner {
         this.list.forEach(taskList => console.log(taskList.title));
     }
     }
+
+    showOverdueTasks() { 
+        this.list.forEach(taskList => taskList.showOverdueTasks());
+    }
+
+    showAllTasks() { 
+        this.list.forEach(taskList => taskList.showTasks());
+    }
 }
 
 
 const myPlanner = new Planner(1, "My planner", "Its my planner");
 myPlanner.addTaskList(taskList1);
 myPlanner.showTaskLists();
+myPlanner.showOverdueTasks()
 
