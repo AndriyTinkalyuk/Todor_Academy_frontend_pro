@@ -7,14 +7,14 @@ class Person {
     }
 
     greet() { 
-        console.log(`привіт! Я ${this.name}`)
+        return `привіт! Я ${this.name}`;
        }
 }
 
 const person1 = new Person("Andriy", 19, "male");
 const person2 = new Person("Roman", 16, "male");
-person1.greet();
-person2.greet();
+console.log(person1.greet());
+console.log(person2.greet());
 
 class Student extends Person {
     constructor(name, age, gender, studentId ) { 
@@ -23,19 +23,19 @@ class Student extends Person {
     }
 
     greet() { 
-        console.log(`привіт! Я ${this.name}. Мій студ. ід: ${this.studentId}`)
+        return `привіт! Я ${this.name}. Мій студ. ід: ${this.studentId}`;
     }
 }
 
 const student1 = new Student("Andriy", 19, "male", 1);
 
-student1.greet();
+console.log(student1.greet());
 
 class Shape {  //уявлення немаю яка це фігура і які параметри задавати, впринципі це тут не має значення
 
     
     calculateArea() { 
-        console.log("площа фігури.")
+        return "площа фігури.";
     }
 }
 
@@ -47,12 +47,12 @@ class Circle extends Shape {
     }
 
     calculateArea() { 
-        console.log("Площа кола: " + parseFloat(Math.PI * Math.pow(this.radius, 2)).toFixed(2));
+        return `"Площа кола: " ${parseFloat(Math.PI * Math.pow(this.radius, 2)).toFixed(2)}`;
     }
 }
 
 const circle1 = new Circle(25);
-circle1.calculateArea();
+console.log(circle1.calculateArea());
 
 
 class Library { 
@@ -100,7 +100,7 @@ class Library {
     }
 
     listBook() { 
-        if(!this.books.length >= 0) { 
+        if(this.books.length > 0) { 
             console.log(`Книги бібліотеки ${this.name}:`)
             for(let book of this.books){
                 console.group(`Книга ${book.name}`);
@@ -156,7 +156,7 @@ class Cafe {
         if (Cafe.#instance){return Cafe.#instance}; 
             this.name = name;
             this.menu = new Menu(); // приклад композиції
-            this.barista = new Barista('Sofia', 19, 24455632, "pro"); // приклад композиції
+            this.barista = new Barista('Sofia', 19, 24455632, "pro", this.menu); // приклад композиції
     }
 }
 
@@ -183,23 +183,27 @@ class Worker {
     }
 
     greet() { 
-        console.log(`Hi! My name ${this.name}`);
+        return `Hi! My name ${this.name}`;
     }
 }
 
 
 class Barista extends Worker { 
-    constructor(name, age, passport, level) { 
+    constructor(name, age, passport, level, menu) { 
         super(name, age, passport);
         this.level = level;
+        this.menu = menu;
     }
 
     greet() { 
-        console.log(`Hi! My name ${this.name}. I am ${this.level} barista!`)
+        return `Hi! My name ${this.name}. I am ${this.level} barista!`;
     }
 
-    makedrink(drink){ 
-        console.log(`making ${drink}...`)
+    makeDrink(drink){ 
+        if (this.menu.getDrinks().includes(drink)) {
+        return `making ${drink}...`;
+        }
+        return `We don't have this drink in our menu.`
     }
 }
 
@@ -210,6 +214,7 @@ myCafe.menu.addDrink('espresso');
 
 console.log(myCafe.menu.getDrinks());
 
-myCafe.barista.greet();
+console.log(myCafe.barista.greet());
 
-myCafe.barista.makedrink('espresso');
+console.log(myCafe.barista.makeDrink('espresso'));
+console.log(myCafe.barista.makeDrink('Late'));
