@@ -167,7 +167,12 @@ class Menu {
     }
 
     addDrink(drink) { 
-        this.items.push(drink)
+        if (!this.items.includes(drink)) {
+        this.items.push(drink);
+        return `Drink added`;
+    }
+        return `We have this drink in menu.`
+        
     }
 
     getDrinks(){
@@ -210,7 +215,9 @@ class Barista extends Worker {
 
 const myCafe = new Cafe('Racoon coffe');
 
-myCafe.menu.addDrink('espresso');
+console.log(myCafe.menu.addDrink('espresso'));
+
+console.log(myCafe.menu.addDrink('espresso'));
 
 console.log(myCafe.menu.getDrinks());
 
