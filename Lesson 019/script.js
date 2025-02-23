@@ -44,16 +44,16 @@ const TaskList =  function(id, title, description) {
     let overdueTasks = this.list.filter(task => task.deadline < new Date());
     console.log(`Overdue tasks:`)
     if (overdueTasks.length > 0) { 
-        renderTasks(overdueTasks);
+        this.renderTasks(overdueTasks);
     } else { 
-        console.log(`none`)
+        console.log(`none`);
     }
     }
 
      this.showTasks = () => { 
         console.log(`Tasks in tasklist "${this.title}":`)
         if (this.list.length > 0) {
-            renderTasks(this.list);
+            this.renderTasks(this.list);
         }
         else { 
             console.log(`none`)
@@ -66,7 +66,7 @@ const TaskList =  function(id, title, description) {
             for(let key in task) { 
                 if (key !== "title" && key !== "init"  && key !== "editTask") {
                     if (key === "deadline") { 
-                        calcDeadline(task, key); // виніс просто тому, що легче читати, але це не точно
+                        this.calcDeadline(task, key); // виніс просто тому, що легче читати, але це не точно
                     } else {
                 console.log(`${key}: ${task[key]}`);
                     }
@@ -93,7 +93,6 @@ const taskList1 = new TaskList(1, "My Task List", "It's my tasklist 1...");
 taskList1.addTask(task1);
 taskList1.addTask(task2);
 taskList1.showTasks();
-
 
 
 
@@ -138,5 +137,7 @@ class Planner {
 const myPlanner = new Planner(1, "My planner", "Its my planner");
 myPlanner.addTaskList(taskList1);
 myPlanner.showTaskLists();
-myPlanner.showOverdueTasks()
+myPlanner.showOverdueTasks();
 
+console.log("---------------------------------------");
+taskList1.showOverdueTasks();
