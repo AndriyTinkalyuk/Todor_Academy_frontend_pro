@@ -3,13 +3,18 @@ const Task = {
         this.id = id;
         this.title = title;
         this.description = description;
-        this. status = status;
+        this.status = status;
         this.deadline = deadline;
         return this;
     },
 
     editTask(key, newValue) {
         this[key] = newValue;
+    },
+
+    completeTask() {
+        this.status = 'complete';
+        return `Task "${this.title}" was been completed.`
     }
 }
 
@@ -64,7 +69,7 @@ const TaskList =  function(id, title, description) {
         array.forEach((task) => {
             console.group(task.title)
             for(let key in task) { 
-                if (key !== "title" && key !== "init"  && key !== "editTask") {
+                if (key !== "title" && typeof task[key] !== "function") {
                     if (key === "deadline") { 
                         this.calcDeadline(task, key); // виніс просто тому, що легче читати, але це не точно
                     } else {
@@ -141,3 +146,7 @@ myPlanner.showOverdueTasks();
 
 console.log("---------------------------------------");
 taskList1.showOverdueTasks();
+console.log("---------------------------------------");
+console.log(task1.completeTask());
+
+console.log(task1);
