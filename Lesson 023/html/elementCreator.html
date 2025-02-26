@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="creator">
+            <div class="creator_container">
+            <div class="creator_element">
+                <div id="element"></div>
+            </div>
+            <div class="creator_edit">
+                <div class="creator_group">
+                    <label for="height">Введіть висоту елементу (px):</label>
+                    <input type="number" id="height" name="creator_height" class="creator_height" min="1" value="100">
+
+                    <label for="width">Введіть ширину елементу (px):</label>
+                    <input type="number" id="width" name="creator_width" class="creator_width" min="1" value="100">
+
+                    <label for="radius">Введіть радіус елементу (%):</label>
+                    <input type="range" id="radius" name="creator_radius" class="creator_radius" min="0" max="50" step="1" list="markers" value="0">
+
+                    <datalist id="markers">
+                        <option value="0"></option>
+                        <option value="25"></option>
+                        <option value="50"></option>
+                      </datalist>
+                </div>
+                <div class="creator_group color-group">
+                    <h4>Введіть колір елементу (rgba):</h4>
+                    <label for="red">Червоний (мінімальне - 0, максимальне - 255):</label>
+                    <input type="number" id="red" name="creator_red" class="creator_red color-input" min="1" max="255" value="1">
+                    
+                    <label for="green">Зелений (мінімальне - 0, максимальне - 255):</label>
+                    <input type="number" id="green" name="creator_green" class="creator_green color-input" min="1" max="255" value="1">
+                    
+                    <label for="blue">Синій (мінімальне - 0, максимальне - 255):</label>
+                    <input type="number" id="blue" name="creator_blue" class="creator_blue color-input" min="1" max="255" value="1">
+                    
+                    <label for="opacity">Прозорість (мінімальне - 0, максимальне - 1):</label>
+                    <input type="number" id="opacity" name="creator_opacity" class="creator_opacity color-input" step="0.1" min="0" max="1" value="1">    
+                 </div>
+                 <div class="creator_group">
+                    <button class="creator_shadow add" id="addShadow">Додати тіні</button>
+                    <button class="creator_shadow remove" id="removeShadow">Видалити тіні</button>
+                    <div class="shadow_group">
+                    <label for="shadow_vert">Вертикальна ось:</label><input id="shadow_vert" type="number" min="1" value="5" disabled name="creator_shadow_vert" class="creator_shadow_vert creator-shadow">
+                    <label for="shadow_hor">Горизонтальна ось:</label><input id="shadow_hor" type="number" min="1" value="5" disabled name="creator_shadow_hor" class="creator_shadow_hor creator-shadow">
+                    <label for="shadow_blur">Розмиття тіні:</label><input id="shadow_blur" type="number" min="1" value="5" disabled name="creator_shadow_blur" class="creator_shadow_blur creator-shadow">
+                </div>
+                 </div>
+                 <div class="creator_group"> <button class="addElement">Додати елемент на сторінку</button></div>
+            </div>
+        </div>
+        </section>
+        <section class="elements">        
+        </section>
+    </div>
+    <script type="module" src="../js/elementCreator/elementCreator.js"></script>
+</body>
+</html>
