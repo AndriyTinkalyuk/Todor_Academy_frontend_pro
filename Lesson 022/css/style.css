@@ -1,0 +1,45 @@
+body, html { 
+    height: 100%;
+    overflow: hidden;
+}
+
+.audio_player, .canvas__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.audio_player__conteiner, .canvas__container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.audio_player_name {
+}
+.audio_player_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.audio_player_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;
+}
+
+.audio_player_button:hover {
+    cursor: pointer;
+}
+.prev {
+    transform: rotate(180deg);
+}
+.play-pause {
+}
+.next {
+}
+
+#canvas { 
+    border: 1px solid black;
+}
