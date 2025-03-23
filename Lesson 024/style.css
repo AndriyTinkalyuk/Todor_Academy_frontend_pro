@@ -1,0 +1,12 @@
+html.body { 
+    height: 100%;
+    overflow: hidden;
+}
+
+div{
+    margin-top: 5px;
+}
+
+.task { 
+    padding: 5px;
+}
