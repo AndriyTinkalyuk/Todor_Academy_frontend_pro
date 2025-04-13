@@ -45,7 +45,14 @@ addTaskButton.addEventListener("click", (e) => {
       "status": "to-do",
     }
     
-    postTask(DATA_URL, task).then(response => {showRequestResponse(response); addTask(tasksBody, task);}).catch(e => taskFormError.textContent = e); 
+    postTask(DATA_URL, task)
+    .then(response => {
+      showRequestResponse(response);
+      addTask(tasksBody, task);
+      document.getElementById("title").value = "";
+      document.getElementById("description").value = "";
+      })
+    .catch(e => taskFormError.textContent = e); 
     return; 
   } 
   taskFormError.textContent = "error : fill in all fields!!";
