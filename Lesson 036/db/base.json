@@ -1,10 +1,16 @@
 {
   "tasks": [
     {
+      "id": "1",
+      "title": "Task 1",
+      "description": "Description for task 1",
+      "status": "done"
+    },
+    {
       "id": "2",
       "title": "Task 2",
       "description": "Description for task 2",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "3",
@@ -16,13 +22,13 @@
       "id": "4",
       "title": "Task 4",
       "description": "Description for task 4",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "5",
       "title": "Task 5",
       "description": "Description for task 5",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "6",
@@ -34,13 +40,13 @@
       "id": "7",
       "title": "Task 7",
       "description": "Description for task 7",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "8",
       "title": "Task 8",
       "description": "Description for task 8",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "9",
@@ -64,13 +70,13 @@
       "id": "12",
       "title": "Task 12",
       "description": "Description for task 12",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "13",
       "title": "Task 13",
       "description": "Description for task 13",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "14",
@@ -130,25 +136,25 @@
       "id": "23",
       "title": "Task 23",
       "description": "Description for task 23",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "24",
       "title": "Task 24",
       "description": "Description for task 24",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "25",
       "title": "Task 25",
       "description": "Description for task 25",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "26",
       "title": "Task 26",
       "description": "Description for task 26",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "27",
@@ -160,19 +166,19 @@
       "id": "28",
       "title": "Task 28",
       "description": "Description for task 28",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "29",
       "title": "Task 29",
       "description": "Description for task 29",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "30",
       "title": "Task 30",
       "description": "Description for task 30",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "31",
@@ -184,7 +190,7 @@
       "id": "32",
       "title": "Task 32",
       "description": "Description for task 32",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "33",
@@ -208,7 +214,7 @@
       "id": "36",
       "title": "Task 36",
       "description": "Description for task 36",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "37",
@@ -220,7 +226,7 @@
       "id": "38",
       "title": "Task 38",
       "description": "Description for task 38",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "39",
@@ -250,13 +256,13 @@
       "id": "43",
       "title": "Task 43",
       "description": "Description for task 43",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "44",
       "title": "Task 44",
       "description": "Description for task 44",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "45",
@@ -268,13 +274,13 @@
       "id": "46",
       "title": "Task 46",
       "description": "Description for task 46",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "47",
       "title": "Task 47",
       "description": "Description for task 47",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "48",
@@ -304,7 +310,7 @@
       "id": "52",
       "title": "Task 52",
       "description": "Description for task 52",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "53",
@@ -322,13 +328,13 @@
       "id": "55",
       "title": "Task 55",
       "description": "Description for task 55",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "56",
       "title": "Task 56",
       "description": "Description for task 56",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "57",
@@ -346,13 +352,13 @@
       "id": "59",
       "title": "Task 59",
       "description": "Description for task 59",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "60",
       "title": "Task 60",
       "description": "Description for task 60",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "61",
@@ -364,7 +370,7 @@
       "id": "62",
       "title": "Task 62",
       "description": "Description for task 62",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "63",
@@ -376,7 +382,7 @@
       "id": "64",
       "title": "Task 64",
       "description": "Description for task 64",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "65",
@@ -394,19 +400,19 @@
       "id": "67",
       "title": "Task 67",
       "description": "Description for task 67",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "68",
       "title": "Task 68",
       "description": "Description for task 68",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "69",
       "title": "Task 69",
       "description": "Description for task 69",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "70",
@@ -418,7 +424,7 @@
       "id": "71",
       "title": "Task 71",
       "description": "Description for task 71",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "72",
@@ -436,7 +442,7 @@
       "id": "74",
       "title": "Task 74",
       "description": "Description for task 74",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "75",
@@ -448,7 +454,7 @@
       "id": "76",
       "title": "Task 76",
       "description": "Description for task 76",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "77",
@@ -460,13 +466,13 @@
       "id": "78",
       "title": "Task 78",
       "description": "Description for task 78",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "79",
       "title": "Task 79",
       "description": "Description for task 79",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "80",
@@ -490,7 +496,7 @@
       "id": "83",
       "title": "Task 83",
       "description": "Description for task 83",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "84",
@@ -502,13 +508,13 @@
       "id": "85",
       "title": "Task 85",
       "description": "Description for task 85",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "86",
       "title": "Task 86",
       "description": "Description for task 86",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "87",
@@ -526,13 +532,13 @@
       "id": "89",
       "title": "Task 89",
       "description": "Description for task 89",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "90",
       "title": "Task 90",
       "description": "Description for task 90",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "91",
@@ -550,31 +556,31 @@
       "id": "93",
       "title": "Task 93",
       "description": "Description for task 93",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "94",
       "title": "Task 94",
       "description": "Description for task 94",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "95",
       "title": "Task 95",
       "description": "Description for task 95",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "96",
       "title": "Task 96",
       "description": "Description for task 96",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "97",
       "title": "Task 97",
       "description": "Description for task 97",
-      "status": "to-do"
+      "status": "todo"
     },
     {
       "id": "98",

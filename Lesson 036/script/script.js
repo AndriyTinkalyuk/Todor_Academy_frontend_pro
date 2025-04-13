@@ -61,6 +61,7 @@ addTaskButton.addEventListener("click", (e) => {
 statusButton.addEventListener("click", (e) => {
   e.preventDefault();
   popupStatus.classList.remove("active");
+  document.body.classList.remove("lock");
   const newStatus = document.getElementById("status-value").value;
   updateStatus(DATA_URL, id, {"status": newStatus}).then(response => showRequestResponse(response)).catch(e => taskFormError.textContent = e);
 })

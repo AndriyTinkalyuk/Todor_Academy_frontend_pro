@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body.lock {
@@ -132,6 +131,7 @@ table {
     position: absolute;
     top: 5px;
     right: 5px;
+    cursor: pointer;
   }
 
 
@@ -164,3 +164,57 @@ table {
     100% { transform: rotate(360deg); }
   }
   
+
+  button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 15px;
+  }
+
+  #addTask {
+    background-image: linear-gradient(to right bottom, green, rgb(23, 175, 23));
+    color: white;
+  }
+
+
+  #addTask:hover, #addTask:focus  {
+    background-image: linear-gradient(to right bottom,rgb(23, 175, 23), rgb(88, 180, 88));
+    box-shadow: 2px 2px 10px rgb(23, 175, 23);
+  }
+
+
+  .change-button {
+    background-image: linear-gradient(to right bottom, rgb(245, 245, 88), rgb(255, 255, 98));
+    color: black;
+  }
+
+
+  
+  .change-button:hover, .change-button:focus {
+    background-image: linear-gradient(to right bottom, rgb(255, 255, 0), rgb(255, 255, 98));
+    box-shadow: 2px 2px 10px rgb(216, 216, 0);
+  }
+
+
+
+  .delete-button {
+    background-image: linear-gradient(to right bottom, rgb(232, 8, 8), rgb(252, 38, 38));
+    color: black;
+  }
+
+
+  .delete-button:hover, .delete-button:focus { 
+    background-image: linear-gradient(to right bottom, rgb(249, 56, 56), rgb(255, 63, 63));
+    box-shadow: 2px 2px 10px red;
+  }
+
+
+  tr:nth-child(even) {
+    background-color: #0000001e;
+  }
+
+  thead {
+    background: rgba(59, 59, 59, 0.449);
+
+  }
