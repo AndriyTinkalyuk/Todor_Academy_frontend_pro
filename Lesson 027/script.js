@@ -19,8 +19,11 @@ delayedGreeting("Марія")
 
 
 function randomReject() { 
-    const maxTime = 5000; 
-    const time = Math.random() * maxTime;
+    const maxTime = 5; // seconds 
+    const time = Math.floor(Math.random() * maxTime) + 1; // тепер ми получаємо число від 1 до 5
+    // , оскільки якщо повернеться 0 то + 1 = 1, якщо 0,99 * 5 = math.floor(4,95) = 4 + 1 = 5.
+    // тобто Math.floor(Math.random() * maxTime) повертають число від 0 до 4 включно, а +1 робить діапазон на одиничку вище :D
+    // console.log(time);
     const randomBoolean = Math.random() * 10 > 5;
     const randomNumber = Math.random() * 100;
 // здалось це логічним, щоб не здавалось магічним значенням
@@ -31,7 +34,7 @@ function randomReject() {
                 resolve(randomNumber);
             }
             reject("Виникла помилка");
-        }, time)
+        }, time * 1000) // ms 
     })
 }
 
