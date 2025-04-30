@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklesson_040=self.webpackChunklesson_040||[]).push([[332],{332:(e,n,s)=>{s.r(n),s.d(n,{default:()=>t});var l=s(540);const t=function(){return l.createElement("p",null,"Я динамічний імпорт іншого реакт-компонента. Мабуть. Я не впевнений.")}}}]);
