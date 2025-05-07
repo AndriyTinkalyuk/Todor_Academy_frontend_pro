@@ -1,0 +1,10 @@
+import Car from "./models/Car.js";
+import Bicycle from "./models/Bicycle.js";
+import ElectricCar from "./models/ElectricCar.js";
+const car = new Car();
+const bicycle = new Bicycle();
+const electricCar = new ElectricCar();
+console.log(car.startEngine(), car.move());
+car.drive();
+bicycle.drive();
+console.log(electricCar.startEngine(), electricCar.move(), electricCar.chargeBattery());
