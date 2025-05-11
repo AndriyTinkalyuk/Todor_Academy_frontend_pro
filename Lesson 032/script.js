@@ -4,7 +4,7 @@ const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
 
 function combineArrays(arr1, arr2, newElememt) { 
-    array = [...arr1, ...arr2]; // arr1.concat(arr2);
+   const array = [...arr1, ...arr2]; // arr1.concat(arr2);
     array.push(newElememt);
     return array;
 }
@@ -17,7 +17,7 @@ console.log(newArr); // [1, 2, 3, 4, 5, 6, 7]
 //Завдання 2: Використання значень параметрів за замовчуванням та Rest параметрів
 
 function greetPeople(greeting = "Hello", ...names) {
-   return names.map( nam => `${greeting} ${nam}`);
+   return names.map( nam => `${greeting}, ${nam}`);
   }
   
   const greetings = greetPeople("Hi", "Alice", "Bob", "Charlie");
