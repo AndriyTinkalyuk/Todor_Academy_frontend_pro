@@ -13,7 +13,7 @@ eventSourse.onerror = function (event) {
 }
 eventSourse.addEventListener('close', () => {
     console.log("end connection");
-    eventSource.close();
+    eventSourse.close();
   });
 
   statusButton.addEventListener("click", () => {
