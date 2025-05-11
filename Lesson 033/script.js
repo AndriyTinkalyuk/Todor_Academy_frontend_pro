@@ -75,25 +75,26 @@ function generateURL(protocol, domain, path) {
 // Створіть функцію emphasize(strings, ...values), яка приймає шаблонний рядок і повертає новий рядок, де всі значення, 
 // передані як аргументи, будуть обгорнуті в <em> теги, а також виділяє всі слова "важливо" тегами <strong>важливо</strong>.
   
-  function  emphasize(strings, ...values) { 
-    return strings.reduce( (result, string, id) => {
-      let value;
+function emphasize(strings, ...values) {
+  return strings.reduce((result, string, id) => {
+    string = string.replace(/важливо/g, '<strong>важливо</strong>');
 
-      if(values[id] !== undefined) 
-        { value = `<em>${values[id]}</em>` }
-      else { value = '' };
-
-      if(values[id] === 'важливо') 
-        {value = `<strong>важливо</strong>`};
-      
-
-      if (string.includes(`важливо`)) {
-      string = string.replace(`важливо`, `<strong>важливо</strong>`)
+    let value = '';
+    if (values[id] !== undefined) {
+      if (values[id] === 'важливо') {
+        value = '<strong>важливо</strong>';
+      } else {
+        value = `<em>${values[id]}</em>`;
       }
-      return result + string + value;
-    }, '') 
-  }
+    }
+
+    return result + string + value;
+  }, '');
+}
+
 
 
   console.log(emphasize`крокодилів ${'досить'} ${"важливо"} важливо тримати ${`у воді`}`);
   
+
+  console.log(emphasize` важливо важливо важливо крокодилів ${'досить'} ${"важливо"} важливо тримати ${`у воді`}`);
