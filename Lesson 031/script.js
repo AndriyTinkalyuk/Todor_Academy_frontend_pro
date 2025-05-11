@@ -11,11 +11,11 @@ function* NaturalNumbers() {
 
 const iteratorNaturalNumbers = NaturalNumbers();
 
-// console.log(iterationNaturalNumbers.next().value);
-// console.log(iterationNaturalNumbers.next().value);
-// console.log(iterationNaturalNumbers.next().value);
-// console.log(iterationNaturalNumbers.next().value);
-// console.log(iterationNaturalNumbers.next().value);
+// console.log(iteratorNaturalNumbers.next().value);
+// console.log(iteratorNaturalNumbers.next().value);
+// console.log(iteratorNaturalNumbers.next().value);
+// console.log(iteratorNaturalNumbers.next().value);
+// console.log(iteratorNaturalNumbers.next().value);
 
 //Створіть функцію-генератор, яка видає послідовність Фібоначчі. Перші два числа послідовності - 0 і 1, кожне наступне число дорівнює сумі двох попередніх.
 
@@ -75,17 +75,17 @@ function* primeGenerator() {
     while(true) { 
 
         if(isPrime(number)) {
-            yield number++;
+            yield number;
         }
     number++    
     }
 
 
    function isPrime(num){
-        if(num === 2) { return true};
-        if(num % 2 === 0) {return false};
-        for (let i = num; i <= Math.sqrt(num); i++ ) { 
-            if (num % i - 1 === 0) {
+        if(num === 2) { return true}
+        if(num % 2 === 0) {return false}
+        for (let i = 3; i <= Math.sqrt(num); i++ ) { 
+            if (num % i  === 0) {
                 return false;
             }
         } 
@@ -97,7 +97,7 @@ function* primeGenerator() {
 let iteratorPrimeGen = primeGenerator();
 
 
-// console.log(iteratorPrimeGen.next().value, iteratorPrimeGen.next().value, iteratorPrimeGen.next().value, iteratorPrimeGen.next().value);
+console.log(iteratorPrimeGen.next().value, iteratorPrimeGen.next().value, iteratorPrimeGen.next().value, iteratorPrimeGen.next().value);
 
 
 //Напишіть програму, яка використовує функцію-генератор для генерації геометричної прогресії. Програма повинна приймати початкове значення, коефіцієнт прогресії та кількість членів у прогресії.
